@@ -1,14 +1,9 @@
 import { API_URL } from "../app/(home)/page";
 import styles from "../styles/movie-info.module.css";
-
-async function getMovie(id: string) {
-  console.log(`Fetching movies: ${Date.now()}`);
-  const response = await fetch(`${API_URL}/${id}`);
-  return response.json();
-}
+import { getMovie } from "./movie-info";
 
 async function getCredits(id: string) {
-  console.log(`Fetching movies: ${Date.now()}`);
+  console.log(`Fetching credits: ${Date.now()}`);
   const response = await fetch(`${API_URL}/${id}/credits`);
   return response.json();
 }

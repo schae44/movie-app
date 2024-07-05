@@ -1,7 +1,7 @@
 import { API_URL } from "../app/(home)/page";
 import styles from "../styles/movie-info.module.css";
 
-async function getMovie(id: string) {
+export async function getMovie(id: string) {
   console.log(`Fetching movies: ${Date.now()}`);
   //await new Promise((resolve) => setTimeout(resolve, 5000));
   //throw new Error("you got an error");
@@ -24,6 +24,12 @@ export default async function MovieInfo({ id }: { id: string }) {
         <p>{movie.overview}</p>
         <a href={movie.homepage} target={"_blank"}>
           Homepage &rarr;
+        </a>
+        <a
+          href={`http://localhost:3000/movies/${id}/credits`}
+          target={"_blank"}
+        >
+          Credits &rarr;
         </a>
       </div>
     </div>
