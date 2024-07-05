@@ -26,7 +26,7 @@ export default async function MovieInfo({ id }: { id: string }) {
           Homepage &rarr;
         </a>
         <a
-          href={`http://localhost:3000/movies/${id}/credits`}
+          href={`https://nextjs-movie-app-eight.vercel.app/movies/${id}/credits`}
           target={"_blank"}
         >
           Credits &rarr;
